@@ -271,6 +271,13 @@ function PostList({ posts, setPosts }) {
 function Post({ post, setPosts }) {
   const [isUpdating, setIsUpdating] = useState(false);
   async function handleVote(columnName) {
+    const hasVoted = localStorage.getItem(`voted_${post.id}`);
+
+    if (hasVoted) {
+      alert("You have already voted on this post.");
+      return;
+    }
+
     setIsUpdating(true);
     const { data: updatedPost, error } = await supabase
       .from("posts")
@@ -279,10 +286,12 @@ function Post({ post, setPosts }) {
       .select();
     setIsUpdating(false);
 
-    if (!error)
+    if (!error) {
       setPosts((posts) =>
         posts.map((f) => (f.id === post.id ? updatedPost[0] : f))
       );
+      localStorage.setItem(`voted_${post.id}`, "true"); // Mark post as voted
+    }
   }
 
   return (
