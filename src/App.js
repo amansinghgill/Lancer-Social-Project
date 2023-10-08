@@ -100,7 +100,7 @@ function Loader() {
 }
 
 function Header({ showForm, setShowForm }) {
-  const appTitle = "Today I Learned";
+  const appTitle = "Lancer Social";
 
   return (
     <header className="header">
@@ -142,17 +142,15 @@ function isValidHttpUrl(string) {
 
 function NewPostForm({ setPosts, setShowForm }) {
   const [text, setText] = useState("");
-  // Fixed in a video text overlay
-  const [link, setLink] = useState("");
+  const [link, setLink] = useState(""); // Initialize with an empty string
   const [category, setCategory] = useState("");
   const [isUploading, setIsUploading] = useState(false);
   const textLength = text.length;
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(text, link, category);
 
-    if (text && isValidHttpUrl(link) && category && textLength <= 200) {
+    if (text && category && textLength <= 200) {
       setIsUploading(true);
 
       try {
@@ -166,7 +164,8 @@ function NewPostForm({ setPosts, setShowForm }) {
         }
 
         if (newPost) {
-          setPosts((posts) => [newPost, ...posts]);
+          // Update the posts state with the new post
+          setPosts((prevPosts) => [newPost, ...prevPosts]);
           setText("");
           setLink("");
           setCategory("");
@@ -179,7 +178,7 @@ function NewPostForm({ setPosts, setShowForm }) {
 
       setIsUploading(false);
     } else {
-      alert("Please ensure all fields are filled correctly.");
+      alert("Please ensure all required fields are filled correctly.");
     }
   }
 
@@ -263,7 +262,6 @@ function PostList({ posts, setPosts }) {
           <Post key={post.id} post={post} setPosts={setPosts} />
         ))}
       </ul>
-      <p>There are {posts.length} posts in the database. Add your own!</p>
     </section>
   );
 }
