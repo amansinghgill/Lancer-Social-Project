@@ -1,4 +1,4 @@
-![Lancer Social Logo](logo.png)
+![Lancer Social Logo](public/logo.png)
 
 ## Overview
 
