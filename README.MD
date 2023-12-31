@@ -27,3 +27,8 @@ Deployed at: [Lancer Social](https://thelancersocial.netlify.app/)
 1. **Clone the Repository**: `git clone [repository-url]`
 2. **Install Dependencies**: Run `npm install` in the project directory.
 3. **Start the Development Server**: Execute `npm start`. The app should open in your default browser.
+
+## Future Changes
+
+- You currently have to refresh to see a new post after it is submitted, this will be fixed in the near future
+- The option to sort posts by date will be added, rather than only upvotes, as well as making it so the recent popular posts are shown first by default
