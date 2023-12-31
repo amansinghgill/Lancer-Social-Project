@@ -23,10 +23,14 @@ Deployed at: [Lancer Social](https://thelancersocial.netlify.app/)
 - **CSS**: For styling components.
 
 ## Local Development
+1. **Clone the Repository**: 
+   Use `git clone [repository-url]` to clone the project to your local machine. Replace `[repository-url]` with the URL of your repository.
 
-1. **Clone the Repository**: `git clone [repository-url]`
-2. **Install Dependencies**: Run `npm install` in the project directory.
-3. **Start the Development Server**: Execute `npm start`. The app should open in your default browser.
+2. **Install Dependencies**: 
+   Navigate to your project directory and run `npm install` to install all necessary dependencies.
+
+3. **Start the Development Server**: 
+   In the project directory, execute `npm run start` to start the development server. This should automatically open the application in your default web browser.
 
 ## Future Changes
 
