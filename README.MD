@@ -2,7 +2,7 @@
 
 ## Overview
 
-Lancer Social is a mock anonymous social media platform designed for the students of the University of Windsor (who are also known as "Lancers"). This web app is inspired by Yik Yak, a popular social media platform that was popular on University campuses a few years ago. Lancer Social aims to create a virtual gathering spot where University of Windsor students can share news, events, advice, and other university life aspects.
+Lancer Social is a mock anonymous social media platform designed for the students of the University of Windsor (who are also known as "Lancers"). This web app is inspired by Yik Yak, a popular social media platform that was popular on University campuses a few years ago. Lancer Social aims to create a virtual gathering spot where University of Windsor students can share news, events, advice, and other university life aspects. Posts are ordered by the number of upvotes they have.
 
 ### Visit the App
 
