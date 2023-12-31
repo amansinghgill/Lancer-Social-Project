@@ -1,4 +1,4 @@
-# README for "Lancer Social"
+![Lancer Social Logo](logo.png)
 
 ## Overview
 
